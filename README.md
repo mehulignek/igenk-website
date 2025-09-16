@@ -1,105 +1,168 @@
+# Ignek.com - Digital Experience Platform
 
-# [Next.js Enterprise Boilerplate](https://blazity.com/open-source/nextjs-enterprise-boilerplate) 
+Transform your digital experience with Ignek's cutting-edge solutions. Built with performance and speed as the primary focus through static site generation (SSG).
 
-A production-ready template for building enterprise applications with Next.js. This boilerplate provides a solid foundation with carefully selected technologies and ready-to-go infrastructure to help you develop high-quality applications efficiently.
+## 🚀 Overview
 
-## Motivation
+Ignek.com is a high-performance website built using a hybrid static-dynamic approach, combining the speed of static generation with the flexibility of dynamic content management. This architecture ensures lightning-fast loading times while maintaining excellent SEO performance and user experience.
 
-While most Next.js boilerplates focus on individual developer needs with excessive complexity, **next-enterprise** prioritizes strategic simplicity for enterprise teams. It offers a streamlined foundation with high-impact features that maximize developer productivity and accelerate time-to-market for business-critical applications.
+## 🏗️ Architecture
 
-<a href="https://blazity.com/">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="/assets/blazity-logo-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="/assets/blazity-logo-light.svg">
-  <img alt="Logo" align="right" height="80" src="/assets/blazity-logo-light.svg">
-</picture>
-</a>
+### Hybrid Static-Dynamic Approach
 
-> [!NOTE]
-> **Blazity** is a group of Next.js architects. We help organizations architect, optimize, and deploy high-performance Next.js applications at scale. Contact us at [contact@blazity.com](https://blazity.com) if you’d like to talk about your project.
+**Static Pages (95% of site):**
+- Company pages
+- Services pages
+- Solutions pages
+- Hiring pages
+- About pages
+- Case studies
+- Contact pages
 
+**Dynamic Section:**
+- Blog posts and content management
 
+## 🛠️ Technology Stack
 
-## Documentation
+### Frontend Framework
+- **Next.js** with Static Site Generation (SSG)
+- **TypeScript** for type safety
+- **Tailwind CSS** for utility-first styling
+- **Component-based** design system
 
-There is a separate documentation that explains its functionality, highlights core business values and technical decisions, provides guidelines for future development, and includes architectural diagrams.
+### Performance & Optimization
+- **Global CDN** for lightning-fast content delivery
+- **Image optimization** and lazy loading
+- **Automatic sitemap generation**
+- **Meta tags optimization**
+- **Schema markup**
+- **Progressive Web App (PWA)** capabilities
 
-We encourage you to [visit our docs (docs.blazity.com)](https://docs.blazity.com) to learn more
+### Development Tools
+- **ESLint & Prettier** for code quality
+- **Vitest & React Testing Library** for testing
+- **Playwright** for end-to-end testing
+- **Storybook** for component development
+- **Bundle analyzer** for performance monitoring
 
-## Integrated features
+## 📊 Performance Targets
 
-### Boilerplate
-With this template you will get all the boilerplate features included:
+- **Page Load Time:** < 2 seconds
+- **First Contentful Paint:** < 1.5 seconds
+- **Lighthouse Score:** 95+ on all metrics
+- **Core Web Vitals:** All green scores
 
-* [Next.js 15](https://nextjs.org/) - Performance-optimized configuration using App Directory
-* [Tailwind CSS v4](https://tailwindcss.com/) - Utility-first CSS framework for efficient UI development
-* [ESlint 9](https://eslint.org/) and [Prettier](https://prettier.io/) - Code consistency and error prevention
-* [Corepack](https://github.com/nodejs/corepack) & [pnpm](https://pnpm.io/) as the package manager - For project management without compromises 
-* [Strict TypeScript](https://www.typescriptlang.org/) - Enhanced type safety with carefully crafted config and [ts-reset](https://github.com/total-typescript/ts-reset) library
-* [GitHub Actions](https://github.com/features/actions) - Pre-configured workflows including bundle size and performance tracking
-* Perfect Lighthouse score - Optimized performance metrics
-* [Bundle analyzer](https://www.npmjs.com/package/@next/bundle-analyzer) - Monitor and manage bundle size during development
-* Testing suite - [Vitest](https://vitest.dev), [React Testing Library](https://testing-library.com/react), and [Playwright](https://playwright.dev/) for comprehensive testing
-* [Storybook](https://storybook.js.org/) - Component development and documentation
-* Advanced testing - Smoke and acceptance testing capabilities
-* [Conventional commits](https://www.conventionalcommits.org/) - Standardized commit history management
-* [Observability](https://opentelemetry.io/) - Open Telemetry integration
-* [Absolute imports](https://nextjs.org/docs/advanced-features/module-path-aliases) - Simplified import structure
-* [Health checks](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/) - Kubernetes-compatible monitoring
-* [Radix UI](https://www.radix-ui.com/) - Headless components for customization
-* [CVA](http://cva.style/) (Class Variance Authority) - Consistent design system creation
-* [Renovate BOT](https://www.whitesourcesoftware.com/free-developer-tools/renovate) - Automated dependency and security updates
-* [Patch-package](https://www.npmjs.com/package/patch-package) - External dependency fixes without compromises
-* Component relationship tools - Graph for managing coupling and cohesion
-* [Semantic Release](https://github.com/semantic-release/semantic-release) - Automated changelog generation
-* [T3 Env](https://env.t3.gg/) - Streamlined environment variable management
+## 🚀 Getting Started
 
-### Infrastructure & deployments
+### Prerequisites
+- Node.js 18+ 
+- pnpm (recommended) or npm
 
-#### Vercel
+### Installation
 
-Easily deploy your Next.js app with [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=github&utm_campaign=next-enterprise) by clicking the button below:
+```bash
+# Clone the repository
+git clone https://github.com/ignek/ignek-website.git
 
-[![Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/Blazity/next-enterprise)
+# Navigate to project directory
+cd ignek-website
 
-#### Custom cloud infrastructure
+# Install dependencies
+pnpm install
 
-**next-enterprise** offers dedicated infrastructure as code (IaC) solutions built with Terraform, designed specifically for deploying Next.js applications based on our extensive experience working with enterprise clients.
+# Start development server
+pnpm dev
+```
 
-Learn more in our [documentation (docs.blazity.com)][docs] how to quickstart with the deployments using simple CLI.
+### Available Scripts
 
-#### Available cloud providers and theirs features:
+```bash
+# Development
+pnpm dev          # Start development server
+pnpm build        # Build for production
+pnpm start        # Start production server
+pnpm lint         # Run ESLint
+pnpm type-check   # Run TypeScript checks
 
-* **AWS (Amazon Web Services)**
-  * Automated provisioning of AWS infrastructure
-  * Scalable & secure setup using:
-     * VPC - Isolated network infrastructure
-     * Elastic Container Service (ECS) - Container orchestration
-     * Elastic Container Registry (ECR) - Container image storage
-     * Application Load Balancer - Traffic distribution
-     * S3 + CloudFront - Static asset delivery and caching
-     * AWS WAF - Web Application Firewall protection
-     * Redis Cluster - Caching
-  * CI/CD ready - Continuous integration and deployment pipeline
+# Testing
+pnpm test         # Run unit tests
+pnpm test:watch   # Run tests in watch mode
+pnpm test:e2e     # Run end-to-end tests
 
-*... more coming soon*
+# Storybook
+pnpm storybook    # Start Storybook development server
+pnpm build-storybook  # Build Storybook for production
+```
 
-### Team & maintenance
+## 📁 Project Structure
 
-**next-enterprise** is backed and maintained by [Blazity](https://blazity.com), providing up to date security features and integrated feature updates.
+```
+├── app/                    # Next.js App Router
+│   ├── api/               # API routes
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Homepage
+├── components/            # Reusable UI components
+├── styles/               # Global styles and Tailwind config
+├── docs/                 # Documentation
+├── e2e/                  # End-to-end tests
+└── public/               # Static assets
+```
 
-#### Active maintainers
+## 🎨 Design System
 
-- Igor Klepacki ([neg4n](https://github.com/neg4n)) - Open Source Software Developer
-- Tomasz Czechowski ([tomaszczechowski](https://github.com/tomaszczechowski)) - Solutions Architect & DevOps
-- Jakub Jabłoński ([jjablonski-it](https://github.com/jjablonski-it)) - Head of Integrations
+The website follows a modern, clean design approach with:
+- **Responsive design** for all device sizes
+- **Dark/Light mode** support
+- **Consistent typography** and spacing
+- **Accessible components** following WCAG guidelines
+- **Modern UI patterns** and animations
 
-#### All-time contributors
-[bmstefanski](https://github.com/bmstefanski)
+## 🔧 Content Management
 
-## License
+### Static Pages
+Developer → Code Changes → Git → Auto Deploy → Live Site
 
-MIT
+### Blog Content (Future Implementation)
+Content Editor → WordPress/CMS → API → Auto Rebuild → Live Blog
 
+## 📈 Monitoring & Analytics
 
-[docs]: https://docs.blazity.com/next-enterprise/deployments/enterprise-cli
+- **Performance monitoring** with Core Web Vitals tracking
+- **Real User Monitoring (RUM)**
+- **Bundle size analysis**
+- **SEO monitoring tools**
+- **Uptime monitoring**
+
+## 🚀 Deployment
+
+The website is optimized for deployment on:
+- **Vercel** (recommended)
+- **Netlify**
+- Any static hosting provider
+
+### Deployment Pipeline
+Code Push → Build Process → Static Files → CDN Deployment
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is proprietary and confidential. All rights reserved by Ignek.
+
+## 🆘 Support
+
+For support and questions:
+- Email: support@ignek.com
+- Website: [ignek.com](https://ignek.com)
+
+---
+
+**Built with ❤️ by the Ignek Team**
+
+*Transform your digital experience with Ignek today!*
