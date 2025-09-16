@@ -159,7 +159,7 @@ This project is proprietary and confidential. All rights reserved by Ignek.
 
 For support and questions:
 - Email: support@ignek.com
-- Website: [ignek.com](https://ignek.com)
+- Website: [ignek.com](https://www.ignek.com)
 
 ---
 
