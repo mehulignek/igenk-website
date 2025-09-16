@@ -101,10 +101,10 @@ export default function HomePage() {
               that drive innovation, efficiency, and growth for modern enterprises.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg">
+              <Button href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg">
                 Get Started Today
               </Button>
-              <Button intent="secondary" className="text-white border-white hover:bg-white hover:text-gray-900 px-8 py-3 text-lg">
+              <Button href="/portfolio" intent="secondary" className="text-white border-white hover:bg-white hover:text-gray-900 px-8 py-3 text-lg">
                 View Our Work
               </Button>
             </div>
@@ -170,10 +170,10 @@ export default function HomePage() {
               Let's discuss how we can help accelerate your digital transformation journey
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg font-semibold">
+              <Button href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg font-semibold">
                 Contact Us
               </Button>
-              <Button intent="secondary" className="text-white border-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg">
+              <Button href="/schedule" intent="secondary" className="text-white border-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg">
                 Schedule a Call
               </Button>
             </div>
