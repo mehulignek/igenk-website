@@ -57,7 +57,7 @@ export default function LiferayMigrationPage() {
       {/* Hero */}
       <section className="relative bg-black text-white">
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(800px_circle_at_10%_0%,#0E7BF8_0%,#00979E_40%,transparent_65%)] opacity-25" />
-        <div className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-20 md:pb-24">
+        <div className="mx-auto w-full px-4 md:px-8 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px] pt-10 pb-16 md:pt-20 md:pb-24">
           <div className="grid items-start gap-10 md:grid-cols-2">
             <div>
               <div className="inline-flex items-center rounded-full border border-white/30 px-4 py-2 text-sm text-white/80">Liferay Services</div>
@@ -85,7 +85,7 @@ export default function LiferayMigrationPage() {
 
       {/* Circular reasons section */}
       <section className="bg-white text-black">
-        <div className="mx-auto max-w-7xl px-6 py-16">
+        <div className="mx-auto w-full px-4 md:px-8 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px] py-16">
           <div className="relative mx-auto grid place-items-center rounded-xl bg-gray-50 p-12">
             {/* Outer circle */}
             <div className="relative h-[520px] w-[520px] rounded-full border border-gray-200">
@@ -108,7 +108,7 @@ export default function LiferayMigrationPage() {
 
       {/* Migration Process timeline */}
       <section className="bg-black text-white">
-        <div className="mx-auto max-w-7xl px-6 py-16">
+        <div className="mx-auto w-full px-4 md:px-8 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px] py-16">
           <div className="grid items-start gap-10 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
               <h2 className="text-3xl font-semibold sm:text-4xl md:text-5xl">Our Liferay Migration Process</h2>
@@ -147,7 +147,7 @@ export default function LiferayMigrationPage() {
 
       {/* Case Studies (reuse BlogSection) */}
       <section className="bg-white text-black">
-        <div className="mx-auto max-w-7xl px-6 pt-10">
+        <div className="mx-auto w-full px-4 md:px-8 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px] pt-10">
           <h2 className="text-2xl font-semibold sm:text-3xl md:text-4xl">Related Case Studies</h2>
         </div>
       </section>

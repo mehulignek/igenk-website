@@ -58,7 +58,7 @@ export default function Footer() {
   return (
     <footer className="relative bg-black text-white">
       {/* Top section: menus with right decorative lines and partial width */}
-      <div className="relative mx-auto max-w-7xl px-6 pt-16 pb-14">
+      <div className="relative mx-auto w-full px-4 md:px-8 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px] pt-16 pb-14">
         {/* Decorative grid lines */}
         <div className="pointer-events-none absolute left-0 right-[20%] top-0 h-px bg-white/20" />
         <div className="pointer-events-none absolute left-0 right-[20%] bottom-0 h-px bg-white/20" />
@@ -87,7 +87,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom section: contacts + big logo + motto + bottom bar */}
-      <div className="relative mx-auto max-w-7xl px-6 pt-10 pb-16">
+      <div className="relative mx-auto w-full px-4 md:px-8 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px] pt-10 pb-16">
         {/* Horizontal divider across 80% width */}
         <div className="pointer-events-none absolute left-0 right-[20%] top-0 h-px bg-white/20" />
         {/* Right decorative curve */}

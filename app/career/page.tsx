@@ -36,7 +36,7 @@ export default function CareerPage() {
       <section className="relative text-white">
         <div className="absolute inset-0 -z-10 bg-[url('/images/career_bg.jpg')] bg-cover bg-center" />
         <div className="absolute inset-0 -z-10 bg-black/60" />
-        <div className="mx-auto max-w-7xl px-6 pt-20 pb-16">
+        <div className="mx-auto w-full px-4 md:px-8 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px] pt-20 pb-16">
           <div className="grid items-end gap-10 lg:grid-cols-2">
             <div>
               <div className="inline-flex items-center rounded-full border border-white/30 px-4 py-2 text-sm text-white/80">Career</div>
@@ -58,7 +58,7 @@ export default function CareerPage() {
 
       {/* Perks & Benefits */}
       <section className="bg-black text-white">
-        <div className="mx-auto max-w-7xl px-6 py-16">
+        <div className="mx-auto w-full px-4 md:px-8 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px] py-16">
           <div className="grid items-start gap-10 md:grid-cols-2">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold">Perks & Benefits That Go Beyond The Paycheck</h2>
             <p className="max-w-xl text-sm text-white/80 md:justify-self-end">
@@ -81,7 +81,7 @@ export default function CareerPage() {
 
       {/* Open Roles */}
       <section className="bg-white text-black">
-        <div className="mx-auto max-w-7xl px-6 py-16">
+        <div className="mx-auto w-full px-4 md:px-8 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px] py-16">
           <div className="grid items-start gap-10 md:grid-cols-2">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold">Your Next Opportunity Awaits</h2>
             <p className="max-w-xl text-sm text-gray-700 md:justify-self-end">

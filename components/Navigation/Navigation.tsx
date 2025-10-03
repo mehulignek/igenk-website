@@ -11,8 +11,8 @@ const menu = [
 export default function Navigation() {
   return (
     <header className="relative w-full bg-black text-white">
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(1000px_circle_at_5%_0%,#0E7BF8_0%,#00979E_40%,transparent_65%)] opacity-30" />
-      <nav className="mx-auto max-w-7xl px-6 py-6 flex items-center">
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(800px_circle_at_14%_0%,#00979E_0%,#0E7BF800_60%)] opacity-40" />
+      <nav className="mx-auto w-full px-4 md:px-8 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px] py-6 flex items-center">
         <Link href="/" className="flex items-center gap-3" aria-label="Home">
           <Image src="/images/logo.svg" alt="Ignek logo" width={120} height={28} priority />
         </Link>

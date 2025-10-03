@@ -25,7 +25,7 @@ export default function HeroCTA({
   return (
     <section className="relative bg-black text-white">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(800px_circle_at_10%_0%,#0E7BF8_0%,#00979E_40%,transparent_65%)] opacity-25" />
-      <div className="mx-auto max-w-7xl px-6 py-14">
+      <div className="mx-auto w-full px-4 md:px-8 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px] py-14">
         <div className="grid items-start gap-10 lg:grid-cols-[1.4fr_1fr]">
           {/* Left copy */}
           <div>
@@ -49,7 +49,7 @@ export default function HeroCTA({
             <div className="mt-5 flex items-center gap-4">
               <div className="h-12 w-12 rounded-full bg-white/20 overflow-hidden">
                 {/* Placeholder avatar */}
-                <Image src="/images/logo.svg" alt="Expert" width={48} height={48} className="h-full w-full object-contain" />
+                <Image src="/images/bhavinImage.png" alt="Expert" width={48} height={48} className="h-full w-full object-contain" />
               </div>
               <div>
                 <div className="font-semibold">{expertName}</div>

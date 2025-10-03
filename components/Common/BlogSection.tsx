@@ -16,7 +16,7 @@ export default function BlogSection() {
 
   return (
     <section className="bg-white text-black">
-      <div className="mx-auto max-w-7xl px-6 py-16">
+      <div className="mx-auto w-full px-4 md:px-8 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px] py-16">
         <div className="grid items-start gap-10 md:grid-cols-2">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold">Explore What’s Shaping Digital Today</h2>
           <p className="max-w-xl text-sm text-gray-700 md:justify-self-end">
