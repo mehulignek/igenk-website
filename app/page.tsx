@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import Image from "next/image"
 import { Button } from "../components/Button/Button"
 export const metadata: Metadata = {
   title: "Ignek - Transform Your Digital Experience",
@@ -149,6 +150,75 @@ export default function HomePage() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Outcome Of Our Liferay Performance Tuning Services */}
+      <section className="bg-black text-white">
+        <div className="mx-auto max-w-7xl px-6 py-16">
+          <div className="grid md:grid-cols-2 gap-10 items-start">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold">
+              Outcome Of Our Liferay
+              <br />
+              Performance Tuning Services
+            </h2>
+            <p className="text-sm sm:text-base text-white/80 md:justify-self-end max-w-xl">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.
+              Pellentesque sit amet sapien fringilla, mattis ligula.
+            </p>
+          </div>
+
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+            {[
+              {
+                title: "Enhanced User Experience",
+                desc:
+                  "Delivering a faster, more responsive Liferay Portal through optimized resource allocation for efficient CPU, memory & disk use.",
+              },
+              {
+                title: "Scalability",
+                desc:
+                  "Prepare your Liferay environment for growth with scalable configurations, clustering, and distributed deploy.",
+              },
+              {
+                title: "Load Testing Excellence",
+                desc:
+                  "We are very transparent in terms of work, culture & communication to build trust & strong bonding among employees.",
+              },
+              {
+                title: "Database Performance",
+                desc:
+                  "Optimize database access with tuned configurations, indexing, and query optimizations for enhanced performance.",
+              },
+              {
+                title: "Tailored Portal Configuration",
+                desc:
+                  "Customize Liferay Portal settings to fit your organization’s requirements, ensuring the platform meets your business needs.",
+              },
+              {
+                title: "Web and Application Server Optimization",
+                desc:
+                  "Fine‑tune web and application server settings, including thread pools and connections, to maximize performance.",
+              },
+              {
+                title: "Reliability and Fault Tolerance",
+                desc:
+                  "Increase the reliability of your portal with fine‑tuned settings for clustering, failover mechanisms, and session replication.",
+              },
+              {
+                title: "Java Virtual Machine Fine‑Tuning",
+                desc:
+                  "Optimize JVM settings, including heap size and garbage collection, for improved Java application performance.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="group">
+                <Image src="/images/icon/progress.svg" alt="Progress icon" width={32} height={32} />
+                <h3 className="mt-4 text-xl font-semibold">{item.title}</h3>
+                <p className="mt-3 text-white/80">{item.desc}</p>
+                <div className="mt-6 border-t border-white/30" />
+              </div>
+            ))}
           </div>
         </div>
       </section>
