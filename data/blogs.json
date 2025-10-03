@@ -1,0 +1,26 @@
+[
+  {
+    "id": "post-1",
+    "title": "Build your own Chrome Extension with React",
+    "excerpt": "A Chrome Extension is a small software program that adds extra features or functionality to your browser.",
+    "image": "/images/blog.svg"
+  },
+  {
+    "id": "post-2",
+    "title": "Optimizing Liferay Portal for Performance",
+    "excerpt": "Techniques to improve throughput and responsiveness across your Liferay stack.",
+    "image": "/images/blog.svg"
+  },
+  {
+    "id": "post-3",
+    "title": "Clustering and Failover Best Practices",
+    "excerpt": "Learn how to configure clustering for high availability and resilience.",
+    "image": "/images/blog.svg"
+  },
+  {
+    "id": "post-4",
+    "title": "Advanced JVM Tuning Tips",
+    "excerpt": "From heap sizing to GC strategies — achieve smooth, predictable performance.",
+    "image": "/images/blog.svg"
+  }
+]
