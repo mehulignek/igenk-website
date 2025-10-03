@@ -1,6 +1,6 @@
 import { Metadata } from "next"
 import Image from "next/image"
-import { BlogSection, HeroCTA } from "../components/Common"
+import { BlogSection, Footer, HeroCTA } from "../components/Common"
 import { Button } from "../components/Button/Button"
 export const metadata: Metadata = {
   title: "Ignek - Transform Your Digital Experience",
@@ -316,7 +316,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Common components */}
       <HeroCTA />
       <BlogSection />
