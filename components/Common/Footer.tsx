@@ -26,6 +26,8 @@ export default function Footer() {
     {
       title: "Services",
       items: [
+        { label: "Liferay Migration", href: "/liferay-migration" },
+        { label: "Liferay Support & Maintenance", href: "/liferay-support-and-maintenance" },
         { label: "Enterprise Portal Development", href: "#" },
         { label: "Dedicated Development Team", href: "#" },
         { label: "Back‑end Development", href: "#" },
