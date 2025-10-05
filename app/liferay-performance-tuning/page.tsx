@@ -14,7 +14,7 @@ export default function LiferayPerformanceTuningPage() {
     <main className="pb-16">
       <section className="relative bg-black text-white">
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(800px_circle_at_10%_0%,#00979E_0%,#00979E_40%,transparent_70%)] opacity-25" />
-        <div className="mx-auto w-full px-4 md:px-8 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px] pt-10 pb-16 md:pt-20 md:pb-24">
+        <div className="mx-auto w-full px-4 md:px-8 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px] pt-12 pb-16 md:pt-20 md:pb-28">
           <div className="grid items-start gap-10 md:grid-cols-2">
             <div>
               <div className="inline-flex items-center rounded-full border border-white/30 px-4 py-2 text-sm text-white/80">
@@ -88,7 +88,7 @@ export default function LiferayPerformanceTuningPage() {
 
       {/* Liferay Performance Tuning - Features Grid */}
       <section className="mt-24 bg-white text-black">
-        <div className="mx-auto w-full px-4 md:px-8 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px] py-16">
+        <div className="mx-auto w-full px-4 md:px-8 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px] py-20 md:py-24 lg:py-28">
           <h2 className="text-3xl font-semibold sm:text-4xl md:text-5xl">Liferay Performance Tuning</h2>
           <p className="mt-6 max-w-5xl text-base text-gray-700">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.
@@ -132,7 +132,7 @@ export default function LiferayPerformanceTuningPage() {
 
       {/* Outcome Of Our Liferay Performance Tuning Services */}
       <section className="bg-black text-white">
-        <div className="mx-auto w-full px-4 md:px-8 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px] py-16">
+        <div className="mx-auto w-full px-4 md:px-8 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px] py-20 md:py-24 lg:py-28">
           <div className="grid items-start gap-10 md:grid-cols-2">
             <h2 className="text-3xl font-semibold sm:text-4xl md:text-5xl">
               Outcome Of Our Liferay
@@ -193,7 +193,7 @@ export default function LiferayPerformanceTuningPage() {
 
       {/* What We Do With Our Liferay DXP Performance Tuning Services */}
       <section className="bg-white text-black">
-        <div className="mx-auto w-full px-4 md:px-8 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px] py-16">
+        <div className="mx-auto w-full px-4 md:px-8 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px] py-20 md:py-24 lg:py-28">
           <div className="grid items-start gap-10 md:grid-cols-2">
             <h2 className="text-3xl font-semibold sm:text-4xl md:text-5xl">
               What We Do With Our Liferay DXP
