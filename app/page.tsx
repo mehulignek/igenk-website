@@ -3,6 +3,10 @@ import Image from "next/image"
 import { BlogSection, Footer, HeroCTA } from "../components/Common"
 import { Button } from "../components/Button/Button"
 import { Accordion } from "../components/Common/Accordion"
+import IntermediateFrame from "components/IntermediateFrame"
+import OurCapabilities from "components/OurCapabilities/OurCapabilities"
+import FlexiblePlatforms from "components/FlexiblePlatforms/FlexiblePlatforms"
+import WhatWeBring from "components/WhatWeBring/WhatWeBring"
 export const metadata: Metadata = {
   title: "Ignek - Transform Your Digital Experience",
   description:
@@ -56,42 +60,61 @@ const partners = [
   {
     name: "Infogain",
     image: "/images/partner/youngsoftIndia.svg",
-  }
+  },
 ]
 
 export default function HomePage() {
   return (
     <main className="pb-16">
-      <section className="relative bg-black text-white">
+      <section className="relative bg-black text-white overflow-hidden">
         {/* Top-left subtle radial gradient using provided colors */}
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(900px_900px_at_8%_0%,#00979E_0%,#00979E00_65%)]" />
-        {/* Bottom-right accent near CTA */}
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(700px_700px_at_95%_85%,#00979E_0%,#0E7BF800_60%)] opacity-40" />
+        <div className="pointer-events-none absolute top-0 left-0 -z-10 h-full w-full">
+          <div className="absolute top-[-100px] left-[-100px] h-[500px] w-[500px] rounded-full bg-[#00979E] opacity-20 blur-[100px]" />
+          <div className="absolute right-[-150px] bottom-[-150px] h-[500px] w-[500px] rounded-full bg-[#0E7BF8] opacity-15 blur-[100px]" />
+        </div>
 
-        <div className="mx-auto w-full px-4 md:px-8 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px] pt-12 pb-12 md:pt-24 md:pb-24 lg:pt-28 lg:pb-28">
-          <div className="grid items-start gap-8 md:grid-cols-2">
-            <div>
-              <h1 className="text-4xl font-extrabold leading-[1.05] sm:text-6xl md:text-7xl">
-                Transform Your
-                <br />
-                <span className="italic font-extrabold text-white/90">DIGITAL EXPERIENCE</span>
-                <br />
-                <span className="block">With IGNEK Today</span>
-              </h1>
-              <p className="mt-10 max-w-xl text-sm text-white/80 sm:text-base">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.
-                Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.
-              </p>
-            </div>
-            <div className="md:justify-self-end md:self-end">
-              <Button
+        <div className="mx-auto w-full px-4 md:px-8 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px] pt-20 pb-12 md:pb-24 lg:pb-28">
+          <h1 className="font-extrabold leading-none text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[8.25rem]">
+            Transform Your
+            <br />
+            <span className="italic">DIGITAL EXPERIENCE</span>
+            <br />
+            <span>With IGNEK Today</span>
+          </h1>
+          <div className="mt-10 grid items-start gap-8 md:grid-cols-2">
+            <p className="max-w-xl text-sm text-white/80 sm:text-base">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.
+              Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.
+            </p>
+
+            <div className="md:self-end md:justify-self-end">
+              <a
                 href="#discover"
-                size="lg"
-                intent="secondary"
-                className="rounded-full border-white/30 bg-transparent px-6 py-3 text-white hover:bg-white/10 hover:text-white"
+                className="group flex items-center justify-center gap-2 rounded-full border border-white/20 bg-black/30 px-3 py-3 text-sm text-white transition-colors hover:border-white/40"
               >
-                Discover More
-              </Button>
+                <svg
+                  className="h-5 w-5 rotate-90 transition-transform group-hover:rotate-[135deg]"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 12H16"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M12.5 8.5L16 12L12.5 15.5"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <span className="pr-2">Discover More</span>
+              </a>
             </div>
           </div>
 
@@ -99,38 +122,46 @@ export default function HomePage() {
           <div className="mt-10 border-t border-white/30" />
 
           {/* Logos row: 7 items with spacing and responsive wrap */}
-          <div className="mt-8 grid grid-cols-2 items-center gap-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7">
-            {Array.from({ length: 7 }).map((_, idx) => (
-              <div key={idx} className="flex items-center justify-center opacity-80 hover:opacity-100 transition">
-                <Image
-                  src={partners[idx]?.image}
-                  alt="Partner logo"
-                  width={140}
-                  height={40}
-                />
-              </div>
-            ))}
+         <div className="mt-8 overflow-hidden">
+            {/* Inner container is the animated flex row */}
+            <div className="flex animate-marquee-custom whitespace-nowrap gap-x-16">
+              {/* We map the partners array twice for a seamless loop */}
+              {[...partners, ...partners].map((partner, idx) => (
+                <div
+                  key={idx}
+                  className="flex-shrink-0 flex items-center justify-center w-44 opacity-80 transition hover:opacity-100"
+                >
+                  <Image
+                    src={partner.image}
+                    alt={partner.name} 
+                    width={140}
+                    height={40}
+                    className="object-contain"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      
-
       {/* End-to-End Digital Transformation Partner */}
       <section className="relative bg-black text-white">
-        <div className="mx-auto w-full px-4 md:px-8 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px] py-20 md:py-24 lg:py-32">
+        <div className="mx-auto w-full px-4 py-20 md:px-8 md:py-24 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px]">
           <div className="grid gap-10 md:grid-cols-2 md:gap-12 lg:gap-16">
             <div>
-              <h2 className="text-3xl font-semibold sm:text-4xl md:text-5xl">Your End-to-End Digital Transformation Partner</h2>
+              <h2 className="text-3xl font-semibold sm:text-4xl md:text-5xl">
+                Your End-to-End Digital Transformation Partner
+              </h2>
             </div>
             <p className="max-w-xl text-white/80">
-              We help businesses craft a clear and actionable digital roadmap that aligns with both short-term objectives
-              and long-term vision
+              We help businesses craft a clear and actionable digital roadmap that aligns with both short-term
+              objectives and long-term vision
             </p>
           </div>
 
           {/* Digital Experience + Accordions */}
-          <div className="mt-20 md:mt-24 grid gap-12 md:grid-cols-2 md:gap-14 lg:gap-16">
+          <div className="mt-20 grid gap-12 md:mt-24 md:grid-cols-2 md:gap-14 lg:gap-16">
             <div>
               <h3 className="text-2xl font-semibold md:text-3xl">Digital Experience</h3>
               <p className="mt-3 max-w-xl text-white/80">
@@ -140,17 +171,35 @@ export default function HomePage() {
             <div className="grid gap-10 md:grid-cols-2 md:gap-12">
               <Accordion
                 items={[
-                  { title: "DX Strategy", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi." },
-                  { title: "DX Design", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi." },
-                  { title: "DX Engineering", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi." },
+                  {
+                    title: "DX Strategy",
+                    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.",
+                  },
+                  {
+                    title: "DX Design",
+                    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.",
+                  },
+                  {
+                    title: "DX Engineering",
+                    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.",
+                  },
                 ]}
                 defaultOpenIndex={0}
               />
               <Accordion
                 items={[
-                  { title: "DX Intelligence", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi." },
-                  { title: "DX Marketing", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi." },
-                  { title: "DX Infrastructure", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi." },
+                  {
+                    title: "DX Intelligence",
+                    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.",
+                  },
+                  {
+                    title: "DX Marketing",
+                    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.",
+                  },
+                  {
+                    title: "DX Infrastructure",
+                    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.",
+                  },
                 ]}
                 defaultOpenIndex={null}
               />
@@ -158,7 +207,7 @@ export default function HomePage() {
           </div>
 
           {/* Staff Augmentation + Accordions */}
-          <div className="mt-28 lg:mt-32 grid gap-12 md:grid-cols-2 md:gap-14 lg:gap-16">
+          <div className="mt-28 grid gap-12 md:grid-cols-2 md:gap-14 lg:mt-32 lg:gap-16">
             <div>
               <h3 className="text-2xl font-semibold md:text-3xl">Staff augmentation</h3>
               <p className="mt-3 max-w-xl text-white/80">
@@ -168,9 +217,18 @@ export default function HomePage() {
             <div className="grid gap-10 md:gap-12">
               <Accordion
                 items={[
-                  { title: "Technical Excellence", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi." },
-                  { title: "Value-Based Pricing", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi." },
-                  { title: "Training", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi." },
+                  {
+                    title: "Technical Excellence",
+                    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.",
+                  },
+                  {
+                    title: "Value-Based Pricing",
+                    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.",
+                  },
+                  {
+                    title: "Training",
+                    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.",
+                  },
                 ]}
                 defaultOpenIndex={null}
               />
@@ -178,6 +236,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <IntermediateFrame />
+      <OurCapabilities />
+      <FlexiblePlatforms />
+      <WhatWeBring />
 
       <BlogSection />
       <HeroCTA />
