@@ -29,7 +29,7 @@
 @layer utilities {
   /* Define the animation keyframes */
   @keyframes marquee {
-    0% { transform: translateX(0%); }
+    0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
   }
 
@@ -37,12 +37,14 @@
   .animate-marquee-custom {
     animation: marquee 35s linear infinite;
   }
+  .animate-marquee-medium { animation: marquee 20s linear infinite; }
+  .animate-marquee-fast { animation: marquee 10s linear infinite; }
 }
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
 .scrollbar-hide {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
 }

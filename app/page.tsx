@@ -1,12 +1,15 @@
 import { Metadata } from "next"
 import Image from "next/image"
-import { BlogSection, Footer, HeroCTA } from "../components/Common"
-import { Button } from "../components/Button/Button"
+import { BlogSection } from "../components/Common"
 import { Accordion } from "../components/Common/Accordion"
 import IntermediateFrame from "components/IntermediateFrame"
 import OurCapabilities from "components/OurCapabilities/OurCapabilities"
 import FlexiblePlatforms from "components/FlexiblePlatforms/FlexiblePlatforms"
 import WhatWeBring from "components/WhatWeBring/WhatWeBring"
+import Achievements from "components/Achievements/Achievements"
+import SuccessStories from "components/success-stories/SuccessStories"
+import FAQSection from "components/Common/FAQSection"
+import RatingsSection from "components/Ratings/RatingsSection"
 export const metadata: Metadata = {
   title: "Ignek - Transform Your Digital Experience",
   description:
@@ -65,16 +68,16 @@ const partners = [
 
 export default function HomePage() {
   return (
-    <main className="pb-16">
-      <section className="relative bg-black text-white overflow-hidden">
+    <main className="">
+      <section className="relative overflow-hidden bg-black text-white">
         {/* Top-left subtle radial gradient using provided colors */}
         <div className="pointer-events-none absolute top-0 left-0 -z-10 h-full w-full">
           <div className="absolute top-[-100px] left-[-100px] h-[500px] w-[500px] rounded-full bg-[#00979E] opacity-20 blur-[100px]" />
           <div className="absolute right-[-150px] bottom-[-150px] h-[500px] w-[500px] rounded-full bg-[#0E7BF8] opacity-15 blur-[100px]" />
         </div>
 
-        <div className="mx-auto w-full px-4 md:px-8 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px] pt-20 pb-12 md:pb-24 lg:pb-28">
-          <h1 className="font-extrabold leading-none text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[8.25rem]">
+        <div className="mx-auto w-full px-4 pt-20 pb-12 md:px-8 md:pb-24 lg:pb-28 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px]">
+          <h1 className="text-6xl leading-none font-extrabold md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[8.25rem]">
             Transform Your
             <br />
             <span className="italic">DIGITAL EXPERIENCE</span>
@@ -82,12 +85,12 @@ export default function HomePage() {
             <span>With IGNEK Today</span>
           </h1>
           <div className="mt-10 grid items-start gap-8 md:grid-cols-2">
-            <p className="max-w-xl text-sm text-white/80 sm:text-base">
+            <p className="max-w-xl text-lg text-white/80 sm:text-base">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.
               Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.
             </p>
 
-            <div className="md:self-end md:justify-self-end">
+            <div className="md:self-end md:justify-self-end pb-3">
               <a
                 href="#discover"
                 className="group flex items-center justify-center gap-2 rounded-full border border-white/20 bg-black/30 px-3 py-3 text-sm text-white transition-colors hover:border-white/40"
@@ -119,25 +122,19 @@ export default function HomePage() {
           </div>
 
           {/* Divider line matching text color */}
-          <div className="mt-10 border-t border-white/30" />
+          <div className="mt-14 border-t border-white/30" />
 
           {/* Logos row: 7 items with spacing and responsive wrap */}
-         <div className="mt-8 overflow-hidden">
+          <div className="mt-10 overflow-hidden">
             {/* Inner container is the animated flex row */}
-            <div className="flex animate-marquee-custom whitespace-nowrap gap-x-16">
+            <div className="animate-marquee-fast flex gap-x-16 whitespace-nowrap">
               {/* We map the partners array twice for a seamless loop */}
               {[...partners, ...partners].map((partner, idx) => (
                 <div
                   key={idx}
-                  className="flex-shrink-0 flex items-center justify-center w-44 opacity-80 transition hover:opacity-100"
+                  className="flex w-44 flex-shrink-0 items-center justify-center opacity-80 transition hover:opacity-100"
                 >
-                  <Image
-                    src={partner.image}
-                    alt={partner.name} 
-                    width={140}
-                    height={40}
-                    className="object-contain"
-                  />
+                  <Image src={partner.image} alt={partner.name} width={140} height={40} className="object-contain" />
                 </div>
               ))}
             </div>
@@ -241,9 +238,12 @@ export default function HomePage() {
       <OurCapabilities />
       <FlexiblePlatforms />
       <WhatWeBring />
+      <SuccessStories />
+      <Achievements />
 
       <BlogSection />
-      <HeroCTA />
+      <FAQSection />
+      <RatingsSection />
     </main>
   )
 }

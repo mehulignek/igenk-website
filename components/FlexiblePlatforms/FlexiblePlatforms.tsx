@@ -1,11 +1,11 @@
 // components/FlexiblePlatforms.tsx
 
 import React from 'react';
-import PlatformCard from './PlatformCard';
+// import PlatformCard from './PlatformCard';
+import Image from 'next/image';
 
 const platformsData = [
   {
-    logoSrc: '/images/liferay.png',
     platformName: 'Liferay',
     hoverDescription: (
       <p>
@@ -13,43 +13,47 @@ const platformsData = [
       </p>
     ),
   },
-  {
-    logoSrc: '/images/aem.png',
-    platformName: 'AEM',
-    hoverDescription: (
-      <p>
-        AEM, or <strong>Adobe Experience Manager</strong>, is a comprehensive content management system (CMS) that allows businesses to manage and deliver <strong>digital experiences across various channels like websites, mobile apps, and forms</strong>. It's a Java-based platform known for its flexibility, scalability, and ability to integrate with other Adobe products like Adobe Marketing Cloud.
-      </p>
-    ),
-  }
 ];
 
 const FlexiblePlatforms = () => {
   return (
-    <section className="bg-[#F9FAF7] text-black py-20 lg:py-24">
+    <section className="bg-[#F9FAF7] text-black py-20 lg:py-24 overflow-hidden">
       <div className="mx-auto w-full px-4 md:px-8 [@media(min-width:1440px)]:px-[150px] [@media(min-width:1920px)]:px-[192px] grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
         {/* Left Column: Title and Description */}
         <div>
-          <h2 className="text-4xl sm:text-5xl font-bold leading-tight">
+          <h2 className="text-5xl sm:text-5xl font-bold leading-tight">
             Flexible Platforms.
             <span className="block">Scalable Experiences.</span>
           </h2>
-          <p className="mt-6 text-gray-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.
+          <p className="mt-6 text-lg text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /> Ut et massa mi. Aliquam in hendrerit urna.
           </p>
         </div>
 
-        {/* Right Column: Platform Cards */}
-        <div className="grid sm:grid-cols-2 gap-8">
-          {platformsData.map((platform) => (
-            <PlatformCard
-              key={platform.platformName}
-              logoSrc={platform.logoSrc}
-              platformName={platform.platformName}
-              hoverDescription={platform.hoverDescription}
-            />
-          ))}
+        <div className="relative group rounded-[20px] overflow-hidden w-[355px] h-[253px] sm:w-[480px] sm:h-[320px] md:min-w-[908px] md:h-[646px] mx-auto md:right-[90px]">
+          {/* 1. Background Image */}
+          <Image
+            src="/images/liferay-details.jpg"
+            alt="Liferay Digital Experience Platform"
+            layout="fill"
+            objectFit="cover"
+            className="transition-transform duration-500 group-hover:scale-105"
+          />
+
+          {/* 2. Bottom Shadow Effect */}
+          <div className="absolute bottom-0 left-0 right-0 h-2/3 bg-gradient-to-t from-black/60 to-transparent" />
+
+          {/* 3. Text Overlay (Visible on Hover) */}
+          <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-10 text-white 
+                       bg-black/40 opacity-0 group-hover:opacity-100 
+                       transition-opacity duration-500">
+            <h3 className="text-4xl font-bold">{platformsData[0]?.platformName}</h3>
+            <div className="mt-4 text-lg text-gray-200 leading-relaxed max-w-2xl">
+              {platformsData[0]?.hoverDescription}
+            </div>
+          </div>
         </div>
+
       </div>
     </section>
   );

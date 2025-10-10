@@ -13,9 +13,9 @@ interface HeroCTAProps {
 
 // Common black CTA section with gradient-border buttons and an Expert card
 export default function HeroCTA({
-  title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Lorem ipsum",
+  title = "Flexible Platforms. Scalable Experiences.",
   subtitle =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.",
   ctaText = "Build Your Liferay Portal",
   ctaHref = "#",
   expertName = "Bhavin Panchani",

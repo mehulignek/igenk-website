@@ -2,6 +2,7 @@ import "styles/tailwind.css"
 import Navigation from "../components/Navigation/Navigation"
 import { Footer } from "../components/Common"
 import { Poppins } from "next/font/google";
+import BottomBar from "components/Common/BottomBar";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navigation />
         {children}
         <Footer />
+        <BottomBar />
       </body>
     </html>
   )

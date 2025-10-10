@@ -4,7 +4,7 @@ import { useState } from "react"
 
 export type AccordionItem = {
   title: string
-  content: string
+  content: string | React.ReactNode;
 }
 
 type AccordionProps = {
