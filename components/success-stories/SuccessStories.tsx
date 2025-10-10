@@ -36,28 +36,6 @@ const stories: Story[] = [
   }
 ];
 
-// Animation variants for the container of the cards
-const containerVariants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.4, // Time delay between each card animation
-    },
-  },
-};
-
-// Animation variants for each individual card
-const cardVariants = {
-  hidden: { opacity: 0, y: 150, scale: 0.8 },
-  show: { 
-    opacity: 1, 
-    y: 0, 
-    scale: 1,
-    transition: { duration: 0.6, ease: 'easeOut' } 
-  },
-};
-
 
 const SuccessStories: React.FC = () => {
   return (
@@ -74,7 +52,14 @@ const SuccessStories: React.FC = () => {
         {/* Cards Container - uses space-y to add margin between cards */}
         <div className="space-y-8">
           {stories.map((story, index) => (
-            <SuccessStoryCard key={index} story={story} />
+             <div 
+              key={index} 
+              className="sticky"
+              // The style attribute creates the stacking offset for each card
+              style={{ top: `calc(6rem + ${index * 2}rem)` }}
+            >
+              <SuccessStoryCard story={story} />
+            </div>
           ))}
         </div>
       </div>
